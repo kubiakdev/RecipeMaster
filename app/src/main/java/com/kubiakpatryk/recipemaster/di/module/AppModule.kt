@@ -9,7 +9,7 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 
-@Module(includes = [AndroidSupportInjectionModule::class])
+@Module(includes = [AndroidSupportInjectionModule::class, NetworkModule::class])
 abstract class AppModule {
 
     @ActivityScope
