@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">RecipeMaster</string>
+
+    <string name="global_app_name">RecipeMaster</string>
+    <string name="global_network_error">Network error. I\' am trying to reconnect</string>
+    <string name="global_facebook_app_id">791319397915744</string>
+    <string name="global_facebook_login_protocol_scheme">fb791319397915744</string>
+
+    <string name="activity_main_get_recipe">Get the recipe</string>
+    <string name="activity_main_sign_in_via_facebook">Sign in via facebook</string>
+
 </resources>

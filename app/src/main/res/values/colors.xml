@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorPrimary">#D50000</color>
+    <color name="colorPrimaryDark">#D50000</color>
+    <color name="colorAccent">#FF9800</color>
+
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+
+    <color name="facebook">#3b5998</color>
+
+    <color name="fab_menu_background">#99999999</color>
+    <color name="fab_menu_label_pressed">#DDD</color>
+    <color name="fab_menu_label_ripple">#EEE</color>
+
 </resources>
