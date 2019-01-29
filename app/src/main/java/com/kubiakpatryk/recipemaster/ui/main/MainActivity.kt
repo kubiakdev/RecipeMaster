@@ -8,6 +8,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.snackbar.Snackbar
 import com.kubiakpatryk.recipemaster.R
 import com.kubiakpatryk.recipemaster.ui.base.BaseActivity
+import com.kubiakpatryk.recipemaster.ui.recipe.RecipeActivity
 import com.kubiakpatryk.recipemaster.util.gone
 import com.kubiakpatryk.recipemaster.util.visible
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,7 +21,8 @@ class MainActivity : BaseActivity<MainView, MainPresenter>(), MainView {
         super.onCreate(savedInstanceState)
 
         fabMainRecipe.setOnClickListener {
-            //todo implement switch to next activity
+            startActivity(RecipeActivity.newIntent(this, presenter.recipeModel))
+            //todo snackbar if user is not logged
         }
 
         fabMainFacebook.setOnClickListener {
