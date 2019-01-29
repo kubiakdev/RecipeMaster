@@ -1,11 +1,20 @@
 <resources>
 
     <string name="global_app_name">RecipeMaster</string>
-    <string name="global_network_error">Network error. I\' am trying to reconnect</string>
+    <string name="global_dash">-</string>
     <string name="global_facebook_app_id">791319397915744</string>
     <string name="global_facebook_login_protocol_scheme">fb791319397915744</string>
+    <string name="global_network_error">Network error. I\' am trying to reconnect</string>
 
     <string name="activity_main_get_recipe">Get the recipe</string>
     <string name="activity_main_sign_in_via_facebook">Sign in via facebook</string>
+
+    <string name="activity_recipe_images">Images:</string>
+    <string name="activity_recipe_ingredients">Ingredients:</string>
+    <string name="activity_recipe_preparing">Preparing:</string>
+    <string name="activity_recipe_image_downloaded">Image downloaded</string>
+    <string name="activity_recipe_download_dialog_title">Download image?</string>
+    <string name="activity_recipe_download_dialog_yes">Yes</string>
+    <string name="activity_recipe_download_dialog_no">No</string>
 
 </resources>
