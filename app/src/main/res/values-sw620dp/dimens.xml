@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_main_snacbkar">136dp</dimen>
+
+    <dimen name="textSize_normal">19sp</dimen>
+    <dimen name="textSize_title">36sp</dimen>
+
+    <dimen name="margin_fab">8dp</dimen>
+    <dimen name="margin_category">32dp</dimen>
+    <dimen name="margin_horizontal_item">56dp</dimen>
+    <dimen name="margin_top_images_category">16dp</dimen>
+    <dimen name="margin_dash">16dp</dimen>
+
+    <dimen name="padding_normal">56dp</dimen>
+
+    <dimen name="size_circle_image_view">200dp</dimen>
+
+    <dimen name="width_circle_border">4dp</dimen>
+
+</resources>

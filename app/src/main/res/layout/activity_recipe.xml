@@ -1,78 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.recipe.RecipeActivity">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvRecipeLoggedInAs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_alignParentBottom="true"
+        android:background="@color/login_label"
+        android:gravity="center"
+        android:padding="@dimen/padding_normal"
+        android:textSize="@dimen/textSize_normal"
+        tools:text="@tools:sample/full_names" />
 
-        <TextView
-            android:id="@+id/tvRecipeTitle"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvRecipeLoggedInAs">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:textStyle="bold"
-            tools:text="@tools:sample/lorem" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvRecipeDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            tools:text="@tools:sample/lorem" />
+            <TextView
+                android:id="@+id/tvRecipeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_category"
+                android:textSize="@dimen/textSize_normal"
+                android:textStyle="bold"
+                tools:text="@tools:sample/lorem" />
 
-        <TextView
-            android:id="@+id/tvRecipeIngredients"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/activity_recipe_ingredients"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvRecipeDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_horizontal_item"
+                android:layout_marginEnd="@dimen/margin_horizontal_item"
+                android:textSize="@dimen/textSize_normal"
+                tools:text="@tools:sample/lorem" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvRecipeIngredients"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp" />
+            <TextView
+                android:id="@+id/tvRecipeIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_category"
+                android:text="@string/activity_recipe_ingredients"
+                android:textSize="@dimen/textSize_normal"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvRecipePreparing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/activity_recipe_preparing"
-            android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecipeIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_horizontal_item"
+                android:layout_marginEnd="@dimen/margin_horizontal_item" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvRecipePreparing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp" />
+            <TextView
+                android:id="@+id/tvRecipePreparing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_category"
+                android:text="@string/activity_recipe_preparing"
+                android:textSize="@dimen/textSize_normal"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvRecipeImages"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/activity_recipe_images"
-            android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecipePreparing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_horizontal_item"
+                android:layout_marginEnd="@dimen/margin_horizontal_item" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvRecipeImages"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp" />
+            <TextView
+                android:id="@+id/tvRecipeImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_category"
+                android:layout_marginTop="@dimen/margin_top_images_category"
+                android:layout_marginEnd="@dimen/margin_category"
+                android:layout_marginBottom="@dimen/margin_category"
+                android:text="@string/activity_recipe_images"
+                android:textSize="@dimen/textSize_normal"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecipeImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_category"
+                android:textSize="@dimen/textSize_normal" />
 
-</ScrollView>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

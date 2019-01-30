@@ -14,4 +14,6 @@
     <color name="fab_menu_label_pressed">#DDD</color>
     <color name="fab_menu_label_ripple">#EEE</color>
 
+    <color name="login_label">#DDD</color>
+
 </resources>

@@ -3,4 +3,19 @@
 
     <dimen name="margin_main_snacbkar">88dp</dimen>
 
+    <dimen name="textSize_normal">14sp</dimen>
+    <dimen name="textSize_title">28sp</dimen>
+
+    <dimen name="margin_fab">4dp</dimen>
+    <dimen name="margin_category">16dp</dimen>
+    <dimen name="margin_horizontal_item">32dp</dimen>
+    <dimen name="margin_top_images_category">8dp</dimen>
+    <dimen name="margin_dash">8dp</dimen>
+
+    <dimen name="padding_normal">16dp</dimen>
+
+    <dimen name="size_circle_image_view">200dp</dimen>
+
+    <dimen name="width_circle_border">2dp</dimen>
+
 </resources>

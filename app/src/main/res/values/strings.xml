@@ -8,6 +8,11 @@
 
     <string name="activity_main_get_recipe">Get the recipe</string>
     <string name="activity_main_sign_in_via_facebook">Sign in via facebook</string>
+    <string name="activity_main_logged_in_as">Logged in as %s</string>
+    <string name="activity_main_logout_out">Logged out</string>
+    <string name="activity_main_user_log_in_first">Log in to get the recipe</string>
+    <string name="activity_main_login_cancel">Login cancel</string>
+    <string name="activity_main_login_error">Login error</string>
 
     <string name="activity_recipe_images">Images:</string>
     <string name="activity_recipe_ingredients">Ingredients:</string>
