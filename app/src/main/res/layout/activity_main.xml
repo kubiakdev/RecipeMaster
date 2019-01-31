@@ -6,20 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-    <ProgressBar
-        android:id="@+id/pbMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civRecipeImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="@dimen/size_circle_image_view"
+        android:layout_height="@dimen/size_circle_image_view"
         android:layout_gravity="center"
         android:src="@color/white"
         app:civ_border_color="@color/colorPrimary"
-        app:civ_border_width="2dp" />
+        app:civ_border_width="@dimen/width_circle_border" />
 
     <TextView
         android:id="@+id/tvMainTitle"
@@ -28,7 +22,7 @@
         android:layout_gravity="center"
         android:text="@string/global_app_name"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="@dimen/textSize_title"
         android:textStyle="bold"
         android:visibility="gone" />
 
@@ -43,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom|end"
-        android:padding="16dp"
+        android:padding="@dimen/padding_normal"
         android:src="@drawable/ic_add"
         app:menu_backgroundColor="@color/fab_menu_background"
         app:menu_colorNormal="@color/colorAccent"
@@ -51,6 +45,7 @@
         app:menu_fab_size="normal"
         app:menu_labels_colorNormal="@color/white"
         app:menu_labels_colorPressed="@color/fab_menu_label_pressed"
+        app:menu_labels_textSize="@dimen/textSize_normal"
         app:menu_labels_colorRipple="@color/fab_menu_label_ripple"
         app:menu_labels_textColor="@color/black">
 
@@ -58,6 +53,7 @@
             android:id="@+id/fabMainRecipe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_fab"
             android:src="@drawable/ic_recipe"
             app:fab_label="@string/activity_main_get_recipe"
             app:fab_size="mini" />
@@ -66,6 +62,7 @@
             android:id="@+id/fabMainFacebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_fab"
             android:src="@drawable/ic_facebook"
             app:fab_colorNormal="@color/facebook"
             app:fab_colorPressed="@color/facebook"
@@ -73,5 +70,11 @@
             app:fab_size="mini" />
 
     </com.github.clans.fab.FloatingActionMenu>
+
+    <ProgressBar
+        android:id="@+id/pbMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

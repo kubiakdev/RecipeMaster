@@ -1,5 +1,6 @@
 package com.kubiakpatryk.recipemaster.ui.main
 
+import com.kubiakpatryk.recipemaster.R
 import com.kubiakpatryk.recipemaster.service.api.RecipeApi
 import com.kubiakpatryk.recipemaster.service.model.RecipeModel
 import com.kubiakpatryk.recipemaster.ui.base.BasePresenter
@@ -28,16 +29,16 @@ class MainPresenter @Inject constructor(private val api: RecipeApi) : BasePresen
                     .delay(TIMEOUT, TimeUnit.SECONDS)
                     .observeOn(AndroidSchedulers.mainThread())
                     .doOnNext {
-                        view?.showNetworkError()
+                        view?.showAnnouncement(R.string.global_network_error)
                     }
             }
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
                 onSuccess = { model ->
                     recipeModel = model
-                    view?.hideProgressBar()
-                    model?.imgs?.get(RECIPE_PREVIEW_IMAGE_URL_INDEX)?.let { url ->
-                        view?.apply {
+                    view?.apply {
+                        hideProgressBar()
+                        model?.imgs?.get(RECIPE_PREVIEW_IMAGE_URL_INDEX)?.let { url ->
                             updateImage(url)
                             showAppTitle()
                         }
@@ -45,7 +46,7 @@ class MainPresenter @Inject constructor(private val api: RecipeApi) : BasePresen
 
                 },
                 onError = {
-                    view?.showNetworkError()
+                    view?.showAnnouncement(R.string.global_network_error)
                 }
             )
     )

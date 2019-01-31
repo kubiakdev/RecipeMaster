@@ -24,6 +24,7 @@ import com.kubiakpatryk.recipemaster.ui.recipe.adapter.ingredient.RecipeIngredie
 import com.kubiakpatryk.recipemaster.ui.recipe.adapter.preparing.RecipePreparingAdapter
 import com.kubiakpatryk.recipemaster.ui.recipe.adapter.preparing.RecipePreparingAdapterListener
 import com.kubiakpatryk.recipemaster.ui.recipe.adapter.preparing.RecipePreparingItem
+import com.kubiakpatryk.recipemaster.util.EXTRA_FULL_NAME
 import com.kubiakpatryk.recipemaster.util.EXTRA_RECIPE
 import com.kubiakpatryk.recipemaster.util.RECIPE_PREVIEW_IMAGE_URL_INDEX
 import com.tbruyelle.rxpermissions2.RxPermissions
@@ -50,6 +51,11 @@ class RecipeActivity : BaseActivity<RecipeView, RecipePresenter>(),
                 getParcelable<RecipeModel>(EXTRA_RECIPE)?.let {
                     setUpView(it)
                 }
+            }
+
+            if (containsKey(EXTRA_FULL_NAME)) {
+                tvRecipeLoggedInAs.text =
+                    String.format(getString(R.string.activity_main_logged_in_as), getString(EXTRA_FULL_NAME))
             }
         }
     }
@@ -154,8 +160,13 @@ class RecipeActivity : BaseActivity<RecipeView, RecipePresenter>(),
 
         private const val SPAN_COUNT = 2
 
-        fun newIntent(context: Context, recipe: RecipeModel) = Intent(context, RecipeActivity::class.java).apply {
+        fun newIntent(
+            context: Context,
+            recipe: RecipeModel,
+            fullName: String
+        ) = Intent(context, RecipeActivity::class.java).apply {
             putExtra(EXTRA_RECIPE, recipe)
+            putExtra(EXTRA_FULL_NAME, fullName)
         }
 
     }

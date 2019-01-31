@@ -1,10 +1,16 @@
 package com.kubiakpatryk.recipemaster
 
+import com.facebook.appevents.AppEventsLogger
 import com.kubiakpatryk.recipemaster.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 
 class App : DaggerApplication() {
+
+    override fun onCreate() {
+        super.onCreate()
+        AppEventsLogger.activateApp(this)
+    }
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> =
         DaggerAppComponent.builder().create(this)
